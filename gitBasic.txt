@@ -1,0 +1,103 @@
+step1:
+$ bomebrew install git
+
+step2:
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+
+step3:
+
+$ mkdir directory
+$ git init
+
+step4:
+$ add file.txt file2.txt
+$ commit -m ''  | commit 
+
+step5:
+$ git status
+//红色的文件是尚未staged（add）,绿色是已经staged（added）的，
+$ git diff
+//显示文件的差异。
+$ git checkout -- xxx.txt
+//放弃变更。
+
+step6:
+$ git log 
+//show all log
+$ git log xxx.txt
+//show specific file log
+$ git log --pretty=oneline
+//show log in one line
+
+step7:
+$ git reset --hard HEAD^
+//回退一个版本。
+
+step8:
+$ git reflog
+//
+
+
+step9:撤销
+$ git checkout -- xxx.txt
+//用暂存区或者仓库覆盖本地
+$ git reset HEAD xxx.txt
+//用仓库覆盖暂存区。
+
+
+远程仓库：
+$ git remote add origin git@github.com:michaelliao/learngit.git
+//将本地仓库推送到github仓库。
+$ git push -u origin master
+
+
+新建、切换分支：
+$ git branch dev
+$ git checkout dev
+// git checkout -b dev
+$ git checkout -t origin/xxxx   //切换远程分支
+
+
+查看分支：
+$ git branch
+$ git branch -va
+
+合并分支：
+$ git merge branchName
+//TODO 如果没有冲突，就直接合并成功，如果有冲突，则。。。。
+
+删除分支：
+$ git branch -d branchName
+
+
+非fastforward模式合并
+$ git merge --no-ff -m '' devbranch
+
+查看log
+$ git log --graph --pretty=oneline --abbrev-commit 
+
+
+放下当前的工作：
+$ git stash
+
+
+还原工作现场
+$ git stash list
+$ git stash apply xxx  /  git stash pop
+
+
+将本地git和网络仓库关联。
+$ git remote add origin url
+$ git push -u origin master
+
+
+查看网络仓库的权限
+$ git remote -v
+
+
+
+
+
+
+
